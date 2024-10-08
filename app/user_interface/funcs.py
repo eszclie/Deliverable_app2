@@ -34,8 +34,8 @@ def bind_socket():
     # scoring_uri = endpoint.scoring_uri
     # keys = ml_client.online_endpoints.get_keys(name=endpoint_name)
     # key = keys.primary_key
-    scoring_uri = os.environ["key"]
-    key = os.environ["score"]
+    scoring_uri = os.environ["score"]
+    key = os.environ["key"]
     headers = {"Authorization": ("Bearer " + key)}
     return scoring_uri, headers
 
