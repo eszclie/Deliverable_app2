@@ -7,7 +7,7 @@ from azure.ai.ml import MLClient
 from azure.identity import DefaultAzureCredential
 from dotenv import load_dotenv
 
-from src.feature_engineering.cyclical_encoding_new_inputs import extract_cyclical_features
+from cyclical_encoding_new_inputs import extract_cyclical_features
 
 
 @st.cache_resource
