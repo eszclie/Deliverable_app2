@@ -30,10 +30,12 @@ def bind_socket():
     endpoint_name = "endpoint-xgb-model"
 
     # Get the endpoint credentials
-    endpoint = ml_client.online_endpoints.get(endpoint_name)
-    scoring_uri = endpoint.scoring_uri
-    keys = ml_client.online_endpoints.get_keys(name=endpoint_name)
-    key = keys.primary_key
+    # endpoint = ml_client.online_endpoints.get(endpoint_name)
+    # scoring_uri = endpoint.scoring_uri
+    # keys = ml_client.online_endpoints.get_keys(name=endpoint_name)
+    # key = keys.primary_key
+    scoring_uri = os.environ["key"]
+    key = os.environ["score"]
     headers = {"Authorization": ("Bearer " + key)}
     return scoring_uri, headers
 
