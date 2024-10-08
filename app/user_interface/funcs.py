@@ -25,7 +25,8 @@ def bind_socket():
         resource_group_name=resource_group,
         workspace_name=workspace_name,
     )
-
+    e = list(ml_client.online_endpoints.list())
+    print("This ", e)
     # Set endpoint name
     endpoint_name = "endpoint-xgb-model"
 
