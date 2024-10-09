@@ -14,26 +14,26 @@ from cyclical_encoding_new_inputs import extract_cyclical_features
 def bind_socket():
     # Load configuration from environment variables
     load_dotenv()
-    subscription_id = os.environ["SUBSCRIPTION_ID"]
-    resource_group = os.environ["RESOURCE_GROUP"]
-    workspace_name = os.environ["WORKSPACE_NAME"]
+    # subscription_id = os.environ["SUBSCRIPTION_ID"]
+    # resource_group = os.environ["RESOURCE_GROUP"]
+    # workspace_name = os.environ["WORKSPACE_NAME"]
 
     # Create Azure ML client
-    ml_client = MLClient(
-        credential=DefaultAzureCredential(),
-        subscription_id=subscription_id,
-        resource_group_name=resource_group,
-        workspace_name=workspace_name,
-    )
-    e = list(ml_client.online_endpoints.list())
-    print("This ", e)
+    # ml_client = MLClient(
+    #    credential=DefaultAzureCredential(),
+    #    subscription_id=subscription_id,
+    #    resource_group_name=resource_group,
+    #    workspace_name=workspace_name,
+    #)
+    # e = list(ml_client.online_endpoints.list())
+    # print("This ", e)
     # Set endpoint name
-    endpoint_name = "endpoint-xgb-model"
+    # endpoint_name = "endpoint-xgb-model"
 
     # Get the endpoint credentials
-    print(ml_client)
-    print(ml_client.online_endpoints)
-    endpoint = ml_client.online_endpoints.get(endpoint_name)
+    # print(ml_client)
+    # print(ml_client.online_endpoints)
+    # endpoint = ml_client.online_endpoints.get(endpoint_name)
     # scoring_uri = endpoint.scoring_uri
     # keys = ml_client.online_endpoints.get_keys(name=endpoint_name)
     # key = keys.primary_key
